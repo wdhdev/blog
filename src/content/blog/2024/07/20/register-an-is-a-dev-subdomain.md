@@ -6,6 +6,7 @@ heroImage: "/2024/07/20/banner.png"
 ---
 
 ## 1. Creating the JSON file
+
 Firstly, you need to go to the [is-a-dev/register](https://wdh.gg/F2Q7VeE) repository on GitHub.
 
 If you don't have a GitHub account, you can create one by clicking `Sign Up`.
@@ -19,6 +20,7 @@ If it says you need to fork the repository, click the fork repository button and
 Next, add the file name near the top where it says `Name your file...`. Name your file the name of the subdomain you want, in my case I want `william.is-a.dev`, so I will name the file `william.json`.
 
 Here are the naming requirements:
+
 - It must be more than 2 characters long but less than 64 characters
 - It cannot contain underscores, only dashes are permitted
 - You can only use standard English characters
@@ -47,6 +49,7 @@ After naming your file you need to put the JSON content into it, here is an exam
 Finally, click `Commit changes...` and then `Propose changes`.
 
 ## 2. Creating your pull request
+
 Now you should be greeted with a screen which looks like this:
 
 ![image](https://i.wdh.gg/EXLugHC9.png)
@@ -56,12 +59,13 @@ All you need to do here is fill out the requirements and place an `x` between th
 Once you have filled out the requirements you can then click the `Create pull request` button and you're done!
 
 ## 3. Waiting...
+
 Since you have created your pull request, you will need to wait for a maintainer to merge it before you domain name becomes active. Make sure to keep an eye on your pull request incase one of the maintainers requests changes.
 
-***Your pull request will normally be merged with-in 12-24 hours, however in some cases it may take longer. Please be patient as the maintainers are very busy.***
+**_Your pull request will normally be merged with-in 12-24 hours, however in some cases it may take longer. Please be patient as the maintainers are very busy._**
 
 Once your pull request is merged you should be good to go! [Open an issue](https://wdh.gg/r1Xw34w) if you run into any trouble.
 
 Congratulations you have successfully setup your free is-a.dev subdomain!
 
-*Make sure to join the is-a.dev [Discord server](https://wdh.gg/WxDO6wi) for announcements regarding the service.*
+_Make sure to join the is-a.dev [Discord server](https://wdh.gg/WxDO6wi) for announcements regarding the service._
