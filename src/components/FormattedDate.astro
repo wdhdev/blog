@@ -10,8 +10,11 @@ const { date } = Astro.props;
 	{
 		date.toLocaleDateString('en-au', {
 			dateStyle: "long",
+			timeZone: "Australia/Perth"
 		}) + ', ' + date.toLocaleTimeString('en-au', {
 			timeStyle: "short",
+			timeZone: "Australia/Perth"
 		})
+		+ ' UTC+8'
 	}
 </time>
