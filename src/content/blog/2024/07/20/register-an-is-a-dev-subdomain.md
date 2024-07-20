@@ -2,7 +2,7 @@
 title: "Register an is-a.dev subdomain"
 description: "A how-to guide on registering your own .is-a.dev subdomain."
 published: "1721445593672"
-heroImage: "/assets/2024/07/20/banner.png"
+heroImage: "/2024/07/20/banner.png"
 ---
 
 ## 1. Creating the JSON file
