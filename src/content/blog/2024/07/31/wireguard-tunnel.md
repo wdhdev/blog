@@ -62,13 +62,13 @@ Finally, add the tunnel configuration to your server or computer and your new tu
 apt install -y resolvconf wireguard
 ```
 
-2. Enable WireGuard to start at boot
+2. Create a file in the `/etc/wireguard` directory called `wg0.conf` and paste the content of your client configuration file from earlier in there.
+
+3. Configure WireGuard to start on boot
 
 ```
-systemctl enable wireguard
+systemctl enable wg-quick@wg0
 ```
-
-3. Create a blank file in the `/etc/wireguard` directory called `wg0.conf` and paste the content of your client configuration file from earlier in there.
 
 4. Restart the new `wg0` interface
 
