@@ -46,7 +46,7 @@ reboot
 ## 3. Server configuration
 Once the server has rebooted, open up the `/etc/wireguard/wg0.conf` file.
 
-You are going to replace the default client local IP address (usually something like `10.66.66.x`, under the `AllowedIPs` option) with the public IP address you want to assign the client. **This IP address must not be the same as the tunnel server's IP address.**
+You are going to replace the default client local IP address (usually something like `10.66.66.x`, under the `AllowedIPs` option) with the public IP address you want to assign the client. **This IP address must not be the same as the tunnel server's IP address, it must be an additional IP that is not in use. Ensure you remove the IPv6 address from the client configuration.**
 
 Then reboot the server once again by running the `reboot` command.
 
