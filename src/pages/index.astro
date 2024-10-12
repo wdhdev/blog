@@ -11,7 +11,7 @@ const posts = (await getCollection('blog')).sort(
 
 function getRandomPlaceholder() {
 	const random = Math.floor(Math.random() * 4) + 1;
-	return `/placeholders/${random}.jpg`;
+	return `https://cdn.hrsn.net/blog/placeholders/${random}.jpg`;
 }
 ---
 
