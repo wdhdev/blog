@@ -2,7 +2,7 @@
 title: "Register an is-a.dev subdomain"
 description: "A how-to guide on registering your own .is-a.dev subdomain."
 published: "1721445593672"
-heroImage: "/2024/07/20/banner.png"
+heroImage: "https://cdn.hrsn.net/blog/2024/07/20/banner.png"
 ---
 
 ## 1. Creating the JSON file
@@ -15,7 +15,7 @@ Navigate to the [`domains/`](https://wdh.gg/borLkD3) folder and then from there 
 
 If it says you need to fork the repository, click the fork repository button and continue with the next steps on your forked repository.
 
-![image](/2024/07/20/Ll3qnqmY.png)
+![image](https://cdn.hrsn.net/blog/2024/07/20/Ll3qnqmY.png)
 
 Next, add the file name near the top where it says `Name your file...`. Name your file the name of the subdomain you want, in my case I want `william.is-a.dev`, so I will name the file `william.json`.
 
@@ -25,7 +25,7 @@ Here are the naming requirements:
 - It cannot contain underscores, only dashes are permitted
 - You can only use standard English characters
 
-![image](/2024/07/20/0GgRMCHy.png)
+![image](https://cdn.hrsn.net/blog/2024/07/20/0GgRMCHy.png)
 
 After naming your file you need to put the JSON content into it, here is an example JSON structure:
 
@@ -52,7 +52,7 @@ Finally, click `Commit changes...` and then `Propose changes`.
 
 Now you should be greeted with a screen which looks like this:
 
-![image](/2024/07/20/EXLugHC9.png)
+![image](https://cdn.hrsn.net/blog/2024/07/20/EXLugHC9.png)
 
 All you need to do here is fill out the requirements and place an `x` between the `[ ]` (so it looks like `[x]`) for each requirement you meet. Please make sure you meet all the requirements before creating the pull request.
 

@@ -2,7 +2,7 @@
 title: "Install and use WireGuard as a tunnel server"
 description: "A how-to guide on installing and configuring WireGuard as a tunnel server."
 published: "1722428008091"
-heroImage: "/2024/07/31/wireguard.webp"
+heroImage: "https://cdn.hrsn.net/blog/2024/07/31/wireguard.webp"
 ---
 
 *To avoid wasting your time, if you are simply wanting to install WireGuard and use it as a VPN, only follow step 1, the rest of the steps will not apply to you. The rest of the tutorial is for advanced users who want to setup tunnels which forward everything to the client such as ports.*
