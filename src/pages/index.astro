@@ -1,105 +1,117 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_DESCRIPTION } from '../consts';
-import { getCollection } from 'astro:content';
-import FormattedDate from '../components/FormattedDate.astro';
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_DESCRIPTION } from "../consts";
+import { getCollection } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => Number(b.data.published) - Number(a.data.published)
-);
+const posts = (await getCollection("blog")).sort((a, b) => Number(b.data.published) - Number(a.data.published));
 
 function getRandomPlaceholder() {
-	const random = Math.floor(Math.random() * 4) + 1;
-	return `https://cdn.hrsn.net/blog/placeholders/${random}.jpg`;
+    const random = Math.floor(Math.random() * 4) + 1;
+    return `https://cdn.hrsn.net/blog/placeholders/${random}.jpg`;
 }
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title="Home" description={SITE_DESCRIPTION} />
-		<style>
-			main {
-				width: 960px;
+    <head>
+        <BaseHead title="Home" description={SITE_DESCRIPTION} />
+        <style>
+            main {
+                width: 960px;
+            }
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2rem;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            ul li {
+                width: calc(50% - 1rem);
+            }
+            ul li * {
+                text-decoration: none;
+                transition: 0.2s ease;
+            }
+            ul li img {
+                margin-bottom: 0.5rem;
+                border-radius: 12px;
+            }
+            ul li a {
+                display: block;
+            }
+            .title {
+                margin: 0;
+                color: rgb(var(--black));
+                line-height: 1;
+            }
+            .date {
+                margin: 0;
+                color: rgb(var(--gray));
+            }
+            ul li a:hover h4,
+            ul li a:hover .date {
+                color: rgb(var(--accent));
+            }
+            ul a:hover img {
+                box-shadow: var(--box-shadow);
+            }
+            @media (max-width: 720px) {
+                ul {
+                    gap: 0.5em;
+                }
+                ul li {
+                    width: 100%;
+                    text-align: center;
+                }
+                ul li:first-child {
+                    margin-bottom: 0;
+                }
+                ul li:first-child .title {
+                    font-size: 1.563em;
+                }
+            }
+
+			.carbon-ads {
+				margin-top: 20px;
+				margin-bottom: 5px;
 			}
-			ul {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 2rem;
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			ul li {
-				width: calc(50% - 1rem);
-			}
-			ul li * {
-				text-decoration: none;
-				transition: 0.2s ease;
-			}
-			ul li img {
-				margin-bottom: 0.5rem;
-				border-radius: 12px;
-			}
-			ul li a {
-				display: block;
-			}
-			.title {
-				margin: 0;
-				color: rgb(var(--black));
-				line-height: 1;
-			}
-			.date {
-				margin: 0;
-				color: rgb(var(--gray));
-			}
-			ul li a:hover h4,
-			ul li a:hover .date {
-				color: rgb(var(--accent));
-			}
-			ul a:hover img {
-				box-shadow: var(--box-shadow);
-			}
-			@media (max-width: 720px) {
-				ul {
-					gap: 0.5em;
-				}
-				ul li {
-					width: 100%;
-					text-align: center;
-				}
-				ul li:first-child {
-					margin-bottom: 0;
-				}
-				ul li:first-child .title {
-					font-size: 1.563em;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<main>
-			<h1>William's Blog</h1>
-			<br>
-			<section>
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<a href={`/${post.slug}`}>
-									{post.data.heroImage && <img width={720} height={360} src={post.data.heroImage} alt="" /> || <img width={720} height={360} src={getRandomPlaceholder()} alt="" />}
-									<h4 class="title">{post.data.title}</h4>
-									<p class="date">
-										<FormattedDate date={new Date(post.data.published)} />
-									</p>
-								</a>
-							</li>
-						))
-					}
-				</ul>
-			</section>
-		</main>
-		<Footer />
-	</body>
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>William's Blog</h1>
+
+			<!-- Carbon Ads -->
+			<div class="carbon-ads">
+				<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CW7DE53E&placement=wdharrisoncom&format=cover" id="_carbonads_js"></script>
+			</div>
+
+            <br />
+
+            <section>
+                <ul>
+                    {
+                        posts.map((post) => (
+                            <li>
+                                <a href={`/${post.slug}`}>
+                                    {(post.data.heroImage && (
+                                        <img width={720} height={360} src={post.data.heroImage} alt="" />
+                                    )) || <img width={720} height={360} src={getRandomPlaceholder()} alt="" />}
+                                    <h4 class="title">{post.data.title}</h4>
+                                    <p class="date">
+                                        <FormattedDate date={new Date(post.data.published)} />
+                                    </p>
+                                </a>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </section>
+        </main>
+        <Footer />
+    </body>
 </html>
