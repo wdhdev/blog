@@ -17,16 +17,23 @@ const blog = defineCollection({
             invalid_type_error:
                 "date must be written in yyyy-mm-dd format without quotes: For example, Jan 22, 2000 should be written as 2000-01-22."
         }),
-        draft: z.boolean({
-            invalid_type_error: "draft must be a boolean"
-        }).optional().default(false),
-        updated: z.date({
-            invalid_type_error:
-                "updated must be written in yyyy-mm-dd format without quotes: For example, Jan 22, 2000 should be written as 2000-01-22."
-        }).optional(),
-        heroImage: z.string({
-            invalid_type_error: "heroImage must be a string"
-        }).optional()
+        draft: z
+            .boolean({
+                invalid_type_error: "draft must be a boolean"
+            })
+            .optional()
+            .default(false),
+        updated: z
+            .date({
+                invalid_type_error:
+                    "updated must be written in yyyy-mm-dd format without quotes: For example, Jan 22, 2000 should be written as 2000-01-22."
+            })
+            .optional(),
+        heroImage: z
+            .string({
+                invalid_type_error: "heroImage must be a string"
+            })
+            .optional()
     })
 });
 

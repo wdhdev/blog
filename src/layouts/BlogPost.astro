@@ -9,11 +9,11 @@ type Props = CollectionEntry<"blog">["data"];
 const { title, date, description, updated, heroImage } = Astro.props;
 
 function formatDate(date: string) {
-	return new Date(date).toLocaleDateString("en-au", {
-		year: "numeric",
-		month: "long",
-		day: "numeric"
-	});
+    return new Date(date).toLocaleDateString("en-au", {
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+    });
 }
 ---
 
