@@ -33,8 +33,7 @@ After naming your file you need to put the JSON content into it, here is an exam
 ```json
 {
     "owner": {
-        "username": "your-github-username",
-        "email": "your@email.address"
+        "username": "your-github-username"
     },
     "record": {
         "RECORDTYPE": "RECORDCONTENT"
@@ -43,9 +42,10 @@ After naming your file you need to put the JSON content into it, here is an exam
 ```
 
 - Replace `your-github-username` with your GitHub username.
-- Replace `your@email.address` with your email address.
-- For `RECORDTYPE` set it to what you need, is-a.dev supports `A`, `AAAA`, `CNAME`, `MX` and `TXT` records. If your website is using GitHub Pages set this to `CNAME`.
+- For `RECORDTYPE` set it to what you require for your use. You can see the records is-a.dev supports [here](https://wdh.gg/r5LHCLQ). If your website is using GitHub Pages, set this to `CNAME`.
 - For `RECORDCONTENT` set this to the value of the record you need, for GitHub Pages this would be `your-github-username.github.io`. (`A`, `AAAA` and `MX` records **must** be an array `[]`.)
+
+**MAKE SURE YOU MODIFY `RECORDTYPE` AND `RECORDCONTENT` TO MATCH THE DNS RECORD YOU REQUIRE.**
 
 Finally, click `Commit changes...` and then `Propose changes`.
 
