@@ -7,10 +7,6 @@ import { getCollection } from "astro:content";
 const posts = (await getCollection("blog"))
     .filter((post) => !post.data.draft)
     .sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
-
-function getRandomPlaceholder() {
-    return `https://cdn.hrsn.net/blog/placeholders/${Math.floor(Math.random() * 4) + 1}.jpg`;
-}
 ---
 
 <!doctype html>
