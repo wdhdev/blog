@@ -1,7 +1,8 @@
 ---
 title: "Register an is-a.dev subdomain"
 description: "A how-to guide on registering your own .is-a.dev subdomain."
-published: "1721445593672"
+date: 2024-07-20
+updated: 2025-01-20
 heroImage: "https://cdn.hrsn.net/blog/2024/07/20/banner.png"
 ---
 

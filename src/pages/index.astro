@@ -3,13 +3,13 @@ import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_DESCRIPTION } from "../consts";
 import { getCollection } from "astro:content";
-import FormattedDate from "../components/FormattedDate.astro";
 
-const posts = (await getCollection("blog")).sort((a, b) => Number(b.data.published) - Number(a.data.published));
+const posts = (await getCollection("blog"))
+    .filter((post) => !post.data.draft)
+    .sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
 
 function getRandomPlaceholder() {
-    const random = Math.floor(Math.random() * 4) + 1;
-    return `https://cdn.hrsn.net/blog/placeholders/${random}.jpg`;
+    return `https://cdn.hrsn.net/blog/placeholders/${Math.floor(Math.random() * 4) + 1}.jpg`;
 }
 ---
 
@@ -22,26 +22,18 @@ function getRandomPlaceholder() {
                 width: 960px;
             }
             ul {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 2rem;
-                list-style-type: none;
+                list-style-type: disc;
                 margin: 0;
-                padding: 0;
+                padding: 1rem 2rem;
             }
             ul li {
-                width: calc(50% - 1rem);
-            }
-            ul li * {
-                text-decoration: none;
-                transition: 0.2s ease;
-            }
-            ul li img {
                 margin-bottom: 0.5rem;
-                border-radius: 12px;
             }
             ul li a {
-                display: block;
+                text-decoration: none;
+                color: rgb(var(--black));
+                display: inline-block;
+                transition: color 0.2s ease;
             }
             .title {
                 margin: 0;
@@ -49,38 +41,12 @@ function getRandomPlaceholder() {
                 line-height: 1;
             }
             .date {
-                margin: 0;
+                font-size: 1rem;
                 color: rgb(var(--gray));
             }
-            ul li a:hover h4,
-            ul li a:hover .date {
-                color: rgb(var(--accent));
-            }
-            ul a:hover img {
-                box-shadow: var(--box-shadow);
-            }
-            @media (max-width: 720px) {
-                ul {
-                    gap: 0.5em;
-                }
-                ul li {
-                    width: 100%;
-                    text-align: center;
-                }
-                ul li:first-child {
-                    margin-bottom: 0;
-                }
-                ul li:first-child .title {
-                    font-size: 1.563em;
-                }
-            }
-
-			.carbon-ads {
-				margin-top: 20px;
-				margin-bottom: 5px;
-			}
         </style>
     </head>
+
     <body>
         <main>
             <h1>William's Blog</h1>
@@ -90,19 +56,22 @@ function getRandomPlaceholder() {
             <section>
                 <ul>
                     {
-                        posts.map((post) => (
-                            <li>
-                                <a href={`/${post.slug}`}>
-                                    {(post.data.heroImage && (
-                                        <img width={720} height={360} src={post.data.heroImage} alt="" />
-                                    )) || <img width={720} height={360} src={getRandomPlaceholder()} alt="" />}
-                                    <h4 class="title">{post.data.title}</h4>
-                                    <p class="date">
-                                        <FormattedDate date={new Date(post.data.published)} />
-                                    </p>
-                                </a>
-                            </li>
-                        ))
+                        posts.map((post) => {
+                            const formattedDate = new Date(post.data.date).toLocaleDateString("en-au", {
+                                year: "numeric",
+                                month: "long",
+                                day: "numeric"
+                            });
+
+                            return (
+                                <li>
+                                    <a href={`/${post.slug}`}>
+                                        {post.data.title}
+                                        <span class="date">({formattedDate})</span>
+                                    </a>
+                                </li>
+                            );
+                        })
                     }
                 </ul>
             </section>

@@ -1,7 +1,7 @@
 ---
 title: "Install and use WireGuard as a tunnel server"
 description: "A how-to guide on installing and configuring WireGuard as a tunnel server."
-published: "1722428008091"
+date: 2024-07-31
 heroImage: "https://cdn.hrsn.net/blog/2024/07/31/wireguard.webp"
 ---
 

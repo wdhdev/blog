@@ -1,7 +1,7 @@
 ---
 title: "First post"
 description: "Welcome to my new blog!"
-published: "1721017788021"
+date: 2024-07-15
 ---
 
 Hello there! Welcome to my **new** and **improved** blog made with [Astro](https://wdh.gg/iAUBTtQ).
