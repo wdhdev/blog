@@ -35,7 +35,7 @@ After naming your file you need to put the JSON content into it, here is an exam
     "owner": {
         "username": "your-github-username"
     },
-    "record": {
+    "records": {
         "RECORDTYPE": "RECORDCONTENT"
     }
 }
