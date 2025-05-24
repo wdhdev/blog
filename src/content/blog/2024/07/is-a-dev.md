@@ -2,7 +2,7 @@
 title: "Register an is-a.dev subdomain"
 description: "A how-to guide on registering your own .is-a.dev subdomain."
 date: 2024-07-20
-updated: 2025-01-20
+updated: 2025-05-24
 heroImage: "https://cdn.hrsn.net/blog/2024/07/20/banner.png"
 ---
 
@@ -63,7 +63,7 @@ Once you have filled out the requirements you can then click the `Create pull re
 
 Since you have created your pull request, you will need to wait for a maintainer to merge it before you domain name becomes active. Make sure to keep an eye on your pull request incase one of the maintainers requests changes.
 
-**_Your pull request will normally be merged with-in 12-24 hours, however in some cases it may take longer. Please be patient as the maintainers are very busy._**
+**_Your pull request will normally be merged with-in 24-48 hours, however in some cases it may take longer. Please be patient as the maintainers are very busy._**
 
 Once your pull request is merged you should be good to go! [Open an issue](https://wdh.gg/r1Xw34w) if you run into any trouble.
 
