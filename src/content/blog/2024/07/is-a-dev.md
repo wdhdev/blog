@@ -8,11 +8,11 @@ heroImage: "https://cdn.hrsn.net/blog/2024/07/20/banner.png"
 
 ## 1. Creating the JSON file
 
-Firstly, you need to go to the [is-a-dev/register](https://wdh.gg/F2Q7VeE) repository on GitHub.
+Firstly, you need to go to the [is-a-dev/register](https://github.com/is-a-dev/register) repository on GitHub.
 
 If you don't have a GitHub account, you can create one by clicking `Sign Up`.
 
-Navigate to the [`domains/`](https://wdh.gg/borLkD3) folder and then from there click the `Add file` button and selecting the `Create new file option`.
+Navigate to the [`domains/`](https://github.com/is-a-dev/register/tree/main/domains) folder and then from there click the `Add file` button and selecting the `Create new file option`.
 
 If it says you need to fork the repository, click the fork repository button and continue with the next steps on your forked repository.
 
@@ -42,7 +42,7 @@ After naming your file you need to put the JSON content into it, here is an exam
 ```
 
 - Replace `your-github-username` with your GitHub username.
-- For `RECORDTYPE` set it to what you require for your use. You can see the records is-a.dev supports [here](https://wdh.gg/r5LHCLQ). If your website is using GitHub Pages, set this to `CNAME`.
+- For `RECORDTYPE` set it to what you require for your use. You can see the records is-a.dev supports [here](https://docs.is-a.dev/faq/#which-dns-record-types-are-supported). If your website is using GitHub Pages, set this to `CNAME`.
 - For `RECORDCONTENT` set this to the value of the record you need, for GitHub Pages this would be `your-github-username.github.io`. (`A`, `AAAA` and `MX` records **must** be an array `[]`.)
 
 **MAKE SURE YOU MODIFY `RECORDTYPE` AND `RECORDCONTENT` TO MATCH THE DNS RECORD YOU REQUIRE.**
@@ -65,8 +65,8 @@ Since you have created your pull request, you will need to wait for a maintainer
 
 **_Your pull request will normally be merged with-in 24-48 hours, however in some cases it may take longer. Please be patient as the maintainers are very busy._**
 
-Once your pull request is merged you should be good to go! [Open an issue](https://wdh.gg/r1Xw34w) if you run into any trouble.
+Once your pull request is merged you should be good to go! [Open an issue](https://github.com/is-a-dev/register/issues/new/choose) if you run into any trouble.
 
 Congratulations you have successfully setup your free is-a.dev subdomain!
 
-_Make sure to join the is-a.dev [Discord server](https://wdh.gg/WxDO6wi) for announcements regarding the service._
+_Make sure to join the is-a.dev [Discord server](https://discord.gg/is-a-dev-830872854677422150) for announcements regarding the service._

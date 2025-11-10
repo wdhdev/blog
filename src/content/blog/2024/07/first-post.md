@@ -4,7 +4,7 @@ description: "Welcome to my new blog!"
 date: 2024-07-15
 ---
 
-Hello there! Welcome to my **new** and **improved** blog made with [Astro](https://wdh.gg/iAUBTtQ).
+Hello there! Welcome to my **new** and **improved** blog made with [Astro](https://astro.build).
 
 On this blog I will ~~hopefully~~ be posting more often than I have on previous blogs.
 
@@ -16,5 +16,3 @@ Some of the content I want to start posting on this blog is:
 - Linux
 - Cybersecurity
 - And more...
-
-If you have any suggestions for what you think I should post here, please DM me on [Discord](https://wdh.gg/discord)!
