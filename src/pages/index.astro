@@ -61,7 +61,7 @@ const posts = (await getCollection("blog"))
 
                             return (
                                 <li>
-                                    <a href={`/${post.slug}`}>
+                                    <a href={`/${post.id}`}>
                                         {post.data.title}
                                         <span class="date">({formattedDate})</span>
                                     </a>
